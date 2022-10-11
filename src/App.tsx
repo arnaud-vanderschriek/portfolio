@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoadingPage from './components/loadingPage/LoadinPage';
 import Portfolio from './components/portfolio/Portfolio';
+import Front from './components/front/Front';
+import Back from './components/back/Back';
 import "./assets/sass/App.scss"
 
 function App() {
@@ -15,13 +17,17 @@ function App() {
    
    return (
     <div>
-      {loading ? (<LoadingPage />) :
           <Router>
             <Routes>
-              <Route path="/" element={<Portfolio />}/>
+
+              
+                <Route path="/" element={ <LoadingPage />} />
+              
+              <Route path='/front' element={ <Front />} />
+              <Route path='/back' element={ <Back />} />
             </Routes>
           </Router>
-      }
+      
     </div>
   );
 }
