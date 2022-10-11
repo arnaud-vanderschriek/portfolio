@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import "../../assets/sass/LoadingPage.scss"
 import Portfolio from '../portfolio/Portfolio';
+import "../../assets/sass/LoadingPage.scss"
 
 
 function LoadingPage() {
@@ -13,25 +13,23 @@ function LoadingPage() {
     }, [])
 
    return (
-    
-    <div id="loadingPage">
-
-    { loading ?  
-        <div>
-            <div className="grid"></div>
-            <div className="lines"></div>
-            <h1>
-                <span>PORTFOLIO</span>
-                <span>PORTFOLIO</span>  
-            </h1>
-            <h2>Vanderschrieck Arnaud</h2> 
-            <h3>Full stack</h3> 
-        </div>
-    : (<Portfolio />)
-    }
-    </div> 
-   )
-   }
+    <div>
+        { loading ? 
+            <div id="loadingPage">
+                <div className="grid"></div>
+                <div className="lines"></div>
+                <h1>
+                    <span>PORTFOLIO</span>
+                    <span>PORTFOLIO</span>  
+                </h1>
+                <h2>Vanderschrieck Arnaud</h2> 
+                <h3>Full stack web dev</h3> 
+            </div> 
+        : (<Portfolio />)
+        }
+    </div>
+    ) 
+}
 
 
 export default LoadingPage;
