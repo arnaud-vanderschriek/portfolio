@@ -9,7 +9,7 @@ import "./assets/sass/App.scss"
 function App() {
    return (
     <Router>
-      <HashRouter basename='/portfolio'>
+      <HashRouter basename='/'>
         <Routes>
           <Route path="/" element={ <LoadingPage />} />
           <Route path='/front' element={ <Front />} />
