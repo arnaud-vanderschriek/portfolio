@@ -9,13 +9,11 @@ import "./assets/sass/App.scss"
 function App() {
    return (
     <Router>
-      {/* <HashRouter basename='/'> */}
         <Routes>
-          <Route path="/portfolio" element={ <LoadingPage />} />
-          <Route path='/front' element={ <Front />} />
-          <Route path='/back' element={ <Back />} />
+          <Route path="/portfolio " element={ <LoadingPage />} />
+          <Route path='/portfolio/front' element={ <Front />} />
+          <Route path='/portfolio/back' element={ <Back />} />
         </Routes>
-      {/* </HashRouter> */}
     </Router> 
   )
 }
