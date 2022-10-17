@@ -4,12 +4,12 @@ import NavBar from '../navBar/NavBar';
 
 
 function Portfolio() {
-    return (
-        <div>
-          <NavBar />
-          <Main /> 
-        </div>
-    )
+  return (
+    <div>
+      <NavBar />
+      <Main /> 
+    </div>
+  )
 }
 
 export default Portfolio;
