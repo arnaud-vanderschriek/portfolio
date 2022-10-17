@@ -11,7 +11,7 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<LoadingPage />} />
       <Route path='/portfolio/front' element={<Front />} />
-      <Route path='/portfolio/back' element={<Back/>} />
+      <Route path='/portfolio/back' element={<Back />} />
     </Routes> 
   )
 }
