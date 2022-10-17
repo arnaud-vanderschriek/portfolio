@@ -2,7 +2,7 @@ import React from "react";
 
 function Back() {
     return(
-        <div>Back</div>
+        <div>Back en construction</div>
     )
 }
 

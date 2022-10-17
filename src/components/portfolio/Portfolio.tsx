@@ -1,10 +1,13 @@
 import React from 'react';
+import Main from '../main/Main';
+import NavBar from '../navBar/NavBar';
 
 
 function Portfolio() {
     return (
         <div>
-            Portfolio et quoi.... tu ne t'affiches pas ?
+          <NavBar />
+          <Main /> 
         </div>
     )
 }
