@@ -1,18 +1,33 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import LoadingPage from './components/loadingPage/LoadinPage';
-import Front from './components/front/Front';
-import Back from './components/back/Back';
+import React, { useEffect, useState } from 'react';
+import Portfolio from './components/portfolio/Portfolio';
 import "./assets/sass/App.scss"
 
 
-export const App = () => {
+export default function App() {
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+            setLoading(false)
+        },10000);
+    }, [])
+
    return (
-    <Routes>
-      <Route path="/" element={<LoadingPage />} />
-      <Route path='/portfolio/front' element={<Front />} />
-      <Route path='/portfolio/back' element={<Back />} />
-    </Routes> 
-  )
+    <div>
+      { loading ? 
+          <div id="loadingPage">
+            <div className="grid"></div>
+            <div className="lines"></div>
+            <h1>
+              <span>PORTFOLIO</span>
+              <span>PORTFOLIO</span>  
+            </h1>
+            <h2>Vanderschrieck Arnaud</h2> 
+            <h3>Full stack web dev</h3> 
+          </div> 
+      : (<Portfolio />)
+      }
+    </div>
+  ) 
 }
 
